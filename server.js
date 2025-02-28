@@ -9,6 +9,7 @@ const new_arrivals = require('./Routes/new_arrivals');
 const rental_vehicles = require("./Routes/rental_vehicles");
 const land_aquisition = require("./Routes/land_aquisition");
 const security_solutions = require("./Routes/security_solutions");
+const apartments = require("./Routes/apartments");
 const admin = require("./Routes/admin");
 
 const app = express();
@@ -38,6 +39,7 @@ app.use("/api/new_arrivals", new_arrivals);
 app.use("/api/rental_vehicles", rental_vehicles);
 app.use("/api/land_aquisition", land_aquisition);
 app.use("/api/security_solutions", security_solutions);
+app.use("/api/apartments", apartments);
 app.use('/admin',admin)
             
 // Start server
