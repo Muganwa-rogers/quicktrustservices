@@ -7,7 +7,7 @@ const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
 // Fetch all apartments
-router.get("/", (req, res) => {
+router.get("/", (req, res) => { 
     const sql = "SELECT * FROM apartments";
     // console.log("2");
     db.query(sql, (err, results) => {

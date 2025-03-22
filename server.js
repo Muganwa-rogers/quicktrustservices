@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./db');
-
+require('dotenv').config();
 //Links fron the routes folder that contain all required
 
 const construction = require("./Routes/construction");
@@ -45,5 +45,11 @@ app.use('/admin',admin)
 // Start server
 const PORT = 5000;
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log('Connecting with:', {
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
+    });
+    
 });
