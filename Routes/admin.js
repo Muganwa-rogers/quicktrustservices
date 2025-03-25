@@ -19,7 +19,7 @@ router.post("/signin", async (req, res) => {
       return res.status(400).json({ message: "User not found" });
     }
     
-    // Assuming the admin table has fields: id, email, and password (stored as plain text)
+    // Assuming the admin table has fields: id, email, and password (stored as plain texts)
     const user = rows[0];
     
     // Compare the provided password with the stored password
